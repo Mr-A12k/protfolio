@@ -1,0 +1,109 @@
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Apply Poppins font globally */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header styling */
+.header {
+    background-color: #ffffff;
+    color: #111827;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 50px;
+    align-content: center;
+    justify-content: center;
+}
+
+/* Container styling */
+.container {
+    display: flex;
+    max-height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Logo styling */
+.logo {
+    display: flex;
+    align-items: center;
+    color: #15133f;
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    fill: #15133f;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links li a {
+    padding: 0.5rem 1rem;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-color 0.3s;
+    font-family: 'Poppins', sans-serif; /* Apply Poppins to links */
+}
+
+.nav-links li a:hover {
+    color: #320a72;
+    border-color: #320a72;
+}
+
+/* Mobile Menu */
+.menu-toggle1 {
+    background: #111827;
+    border: none;
+    display: none;
+    align-items: center;
+    color: #111827;
+    cursor: pointer;
+}
+
+.menu-toggle1 svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Mobile responsive menu styling */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #ffffff;
+        width: 100%;
+        text-align: right;
+    }
+
+    .nav-open {
+        display: flex;
+    }
+
+    .menu-toggle1, .menu-toggle2, .menu-toggle3 {
+        display: flex;
+    }
+}
+
+/* List item styling */
+li {
+    list-style: none;
+    font-size: medium;
+    font-family: 'Poppins', sans-serif; /* Apply Poppins to list items */
+}

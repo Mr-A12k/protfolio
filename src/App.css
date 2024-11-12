@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f4f6;
+  color: #111827;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header styling */
+header {
+  background-color: #ffffff;
+  color: #111827;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Container styling */
+.container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+/* Link styling */
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+a:hover {
+  color: #15133f;
+}
+
+/* Logo styling */
+header .container a {
+  display: flex;
+  align-items: center;
+  color: #15133f;
+}
+
+header .container a svg {
+  width: 32px;
+  height: 32px;
+  fill: #1f1d44;
+}
+
+/* Navigation Links */
+ul {
+  display: flex;
+  gap: 1rem;
+}
+
+ul li a {
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+ul li a:hover {
+  color: #4f46e5;
+  border-color: #4f46e5;
+}
+
+/* Active Link */
+ul li a.dark\\:text-violet-600 {
+  color: #4f46e5;
+  border-color: #4f46e5;
+}
+
+/* Mobile Menu Button */
+button {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  color: #111827;
+  cursor: pointer;
+}
+
+button svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  ul {
+      display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  button {
+      display: block;
   }
 }
